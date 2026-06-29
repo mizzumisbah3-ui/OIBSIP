@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8fafc;
+}
+
+/* Navbar */
+
+nav {
+    background: #0f172a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #6ebfdd;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #facc15;
+}
+
+/* Hero */
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    width: 70%;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #facc15;
+    color: black;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Destinations */
+
+.destinations {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.destinations h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: #0f172a;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+/* Features */
+
+.features {
+    background: #e0f2fe;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.features h2 {
+    color: #0f172a;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+/* Reviews */
+
+.reviews {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.reviews h2 {
+    color: #0f172a;
+    margin-bottom: 30px;
+}
+
+.review-box {
+    background: white;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.review-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact */
+
+.contact {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 60px;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    .cards,
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
