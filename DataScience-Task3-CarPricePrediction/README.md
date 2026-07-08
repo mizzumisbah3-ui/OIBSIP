@@ -44,9 +44,7 @@ The project involved data cleaning, feature engineering, exploratory data analys
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- Jupyter Notebook
 - Visual Studio Code
-
 ---
 
 ## Project Workflow
