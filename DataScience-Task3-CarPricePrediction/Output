@@ -1,0 +1,61 @@
+First 5 Rows
+  Car_Name  Year  Selling_Price  Present_Price  Kms_Driven Fuel_Type Seller_Type Transmission  Owner
+0     ritz  2014           3.35           5.59       27000    Petrol      Dealer       Manual      0
+1      sx4  2013           4.75           9.54       43000    Diesel      Dealer       Manual      0
+2     ciaz  2017           7.25           9.85        6900    Petrol      Dealer       Manual      0
+3  wagon r  2011           2.85           4.15        5200    Petrol      Dealer       Manual      0
+4    swift  2014           4.60           6.87       42450    Diesel      Dealer       Manual      0
+
+Shape of Dataset
+(301, 9)
+
+Data Types
+Car_Name          object
+Year               int64
+Selling_Price    float64
+Present_Price    float64
+Kms_Driven         int64
+Fuel_Type         object
+Seller_Type       object
+Transmission      object
+Owner              int64
+dtype: object
+
+Missing Values
+Car_Name         0
+Year             0
+Selling_Price    0
+Present_Price    0
+Kms_Driven       0
+Fuel_Type        0
+Seller_Type      0
+Transmission     0
+Owner            0
+dtype: int64
+
+Duplicate Rows
+2
+
+Updated Dataset
+  Car_Name  Year  Selling_Price  Present_Price  Kms_Driven Fuel_Type Seller_Type Transmission  Owner  Car_Age  Brand
+0     ritz  2014           3.35           5.59       27000    Petrol      Dealer       Manual      0       11   ritz
+1      sx4  2013           4.75           9.54       43000    Diesel      Dealer       Manual      0       12    sx4
+2     ciaz  2017           7.25           9.85        6900    Petrol      Dealer       Manual      0        8   ciaz
+3  wagon r  2011           2.85           4.15        5200    Petrol      Dealer       Manual      0       14  wagon
+4    swift  2014           4.60           6.87       42450    Diesel      Dealer       Manual      0       11  swift
+
+Linear Regression Results
+MAE : 1.35
+RMSE : 2.39
+R2 Score : 0.78
+
+Random Forest Results
+MAE : 1.37
+RMSE : 3.32
+R2 Score : 0.57
+
+Model Comparison
+Linear Regression R2 : 0.78
+Random Forest R2 : 0.57
+
+Best Model : Linear Regression
