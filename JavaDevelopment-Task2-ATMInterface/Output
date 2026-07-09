@@ -1,0 +1,57 @@
+Enter User ID: Anjum
+Enter PIN: 1234
+
+Login Successful
+
+===== ATM MENU =====
+1. Transaction History
+2. Withdraw
+3. Deposit
+4. Transfer
+5. Quit
+Enter choice: 2
+Enter withdrawal amount: 1000
+Withdrawal Successful
+
+===== ATM MENU =====
+1. Transaction History
+2. Withdraw
+3. Deposit
+4. Transfer
+5. Quit
+Enter choice: 3
+Enter deposit amount: 2000
+Deposit Successful
+
+===== ATM MENU =====
+1. Transaction History
+2. Withdraw
+3. Deposit
+4. Transfer
+5. Quit
+Enter choice: 4
+Enter recipient account ID: 1002
+Enter transfer amount: 500
+Transfer Successful
+
+===== ATM MENU =====
+1. Transaction History
+2. Withdraw
+3. Deposit
+4. Transfer
+5. Quit
+Enter choice: 1
+
+Transaction History
+Withdraw | Amount: ?1000.0 | Money withdrawn successfully
+Deposit | Amount: ?2000.0 | Money deposited successfully
+Transfer | Amount: ?500.0 | Transferred to 1002
+
+===== ATM MENU =====
+1. Transaction History
+2. Withdraw
+3. Deposit
+4. Transfer
+5. Quit
+Enter choice: 5
+Thank you for using ATM
