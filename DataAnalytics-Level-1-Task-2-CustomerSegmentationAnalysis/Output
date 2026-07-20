@@ -1,0 +1,128 @@
+Dataset Loaded Successfully
+
+                         \tEmail                                            Address  ... Length of Membership  Yearly Amount Spent
+0      mstephenson@fernandez.com         835 Frank TunnelWrightmouth, MI 82180-9605  ...                 4.08               587.95
+1              hduke@hotmail.com       4547 Archer CommonDiazchester, CA 06566-8576  ...                 2.66               392.20
+2               pallen@yahoo.com  24645 Valerie Unions Suite 582Cobbborough, DC ...  ...                 4.10               487.55
+3        riverarebecca@gmail.com     1414 David ThroughwayPort Jason, OH 22070-1220  ...                 3.12               581.85
+4  mstephens@davidson-herman.com  14023 Rodriguez PassagePort Jacobville, PR 372...  ...                 4.45               599.41
+
+[5 rows x 7 columns]
+
+Dataset Shape:
+(500, 7)
+
+Dataset Information:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 500 entries, 0 to 499
+Data columns (total 7 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0      Email                500 non-null    object 
+ 1   Address               500 non-null    object 
+ 2   Avatar                500 non-null    object 
+ 3   Time on App           500 non-null    float64
+ 4   Time on Website       500 non-null    float64
+ 5   Length of Membership  500 non-null    float64
+ 6   Yearly Amount Spent   500 non-null    float64
+dtypes: float64(4), object(3)
+memory usage: 27.5+ KB
+None
+
+Missing Values:
+\tEmail                 0
+Address                 0
+Avatar                  0
+Time on App             0
+Time on Website         0
+Length of Membership    0
+Yearly Amount Spent     0
+dtype: int64
+
+Duplicate Values:
+0
+
+After Cleaning:
+\tEmail                 0
+Address                 0
+Avatar                  0
+Time on App             0
+Time on Website         0
+Length of Membership    0
+Yearly Amount Spent     0
+dtype: int64
+
+Statistical Summary:
+       Time on App  Time on Website  Length of Membership  Yearly Amount Spent
+count   500.000000       500.000000             500.00000           500.000000
+mean     12.052620        37.060480               3.53336           499.314240
+std       0.994418         1.010555               0.99926            79.314764
+min       8.510000        33.910000               0.27000           256.670000
+25%      11.390000        36.347500               2.93000           445.037500
+50%      11.980000        37.070000               3.53500           498.890000
+75%      12.752500        37.720000               4.13000           549.312500
+max      15.130000        40.010000               6.92000           765.520000
+
+Available Columns:
+Index(['\tEmail', 'Address', 'Avatar', 'Time on App', 'Time on Website',
+       'Length of Membership', 'Yearly Amount Spent'],
+      dtype='object')
+
+Selected Features:
+   Time on App  Time on Website  Length of Membership  Yearly Amount Spent
+0        12.66            39.58                  4.08               587.95
+1        11.11            37.27                  2.66               392.20
+2        11.33            37.11                  4.10               487.55
+3        13.72            36.72                  3.12               581.85
+4        12.80            37.54                  4.45               599.41
+
+Scaled Data:
+   Time on App  Time on Website  Length of Membership  Yearly Amount Spent
+0     0.611401         2.495700              0.547592             1.118638
+1    -0.948861         0.207539             -0.874882            -1.351848
+2    -0.727404         0.049052              0.567627            -0.148472
+3     1.678419        -0.337261             -0.414080             1.041652
+4     0.752328         0.474987              0.918237             1.263271
+
+Cluster Distribution:
+Cluster
+2    178
+3    114
+0    114
+1     94
+Name: count, dtype: int64
+
+Cluster Profile:
+         Time on App  Time on Website  Length of Membership  Yearly Amount Spent
+Cluster                                                                         
+0          11.574123        37.066842              2.338070           401.215439
+1          12.964043        36.958723              4.583511           606.810957
+2          11.628989        36.422135              3.822191           500.442303
+3          12.441053        38.134737              3.411754           507.014035
+
+CUSTOMER SEGMENTATION INSIGHTS:
+
+Cluster 0:
+Average spending customers suitable for regular promotions.
+
+Cluster 1:
+High income and high spending customers suitable for premium products and loyalty programs.
+
+Cluster 2:
+Low spending customers who can be targeted with discounts.
+
+Cluster 3:
+Potential customers who need personalized marketing strategies.
+
+RECOMMENDATIONS:
+
+1. Provide loyalty rewards for high-value customers.
+
+2. Create personalized offers based on customer segments.
+
+3. Improve engagement with low-spending customers.
+
+4. Use customer groups for targeted marketing campaigns.
+
+
+Customer segmentation file saved successfully!
