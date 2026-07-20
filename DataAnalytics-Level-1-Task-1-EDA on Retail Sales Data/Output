@@ -1,0 +1,128 @@
+Dataset Loaded Successfully
+
+First 5 Rows:
+  InvoiceNo InvoiceDate  InvoiceTime StockCode                          Description  Quantity  UnitPrice  Totalsale  CustomerID         Country
+0    536365  01-12-2010  08:26:00 AM    85123A   WHITE HANGING HEART T-LIGHT HOLDER         6       2.55      15.30     17850.0  United Kingdom
+1    536365  01-12-2010  08:26:00 AM     71053                  WHITE METAL LANTERN         6       3.39      20.34     17850.0  United Kingdom
+2    536365  01-12-2010  08:26:00 AM    84406B       CREAM CUPID HEARTS COAT HANGER         8       2.75      22.00     17850.0  United Kingdom
+3    536365  01-12-2010  08:26:00 AM    84029G  KNITTED UNION FLAG HOT WATER BOTTLE         6       3.39      20.34     17850.0  United Kingdom
+4    536365  01-12-2010  08:26:00 AM    84029E       RED WOOLLY HOTTIE WHITE HEART.         6       3.39      20.34     17850.0  United Kingdom
+
+Dataset Shape:
+(541909, 10)
+
+Dataset Information:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 541909 entries, 0 to 541908
+Data columns (total 10 columns):
+ #   Column       Non-Null Count   Dtype  
+---  ------       --------------   -----  
+ 0   InvoiceNo    541909 non-null  object 
+ 1   InvoiceDate  541909 non-null  object 
+ 2   InvoiceTime  541909 non-null  object 
+ 3   StockCode    541909 non-null  object 
+ 4   Description  540455 non-null  object 
+ 5   Quantity     541909 non-null  int64  
+ 6   UnitPrice    541909 non-null  float64
+ 7   Totalsale    541909 non-null  float64
+ 8   CustomerID   406829 non-null  float64
+ 9   Country      541909 non-null  object 
+dtypes: float64(3), int64(1), object(6)
+memory usage: 41.3+ MB
+None
+
+Missing Values:
+InvoiceNo           0
+InvoiceDate         0
+InvoiceTime         0
+StockCode           0
+Description      1454
+Quantity            0
+UnitPrice           0
+Totalsale           0
+CustomerID     135080
+Country             0
+dtype: int64
+
+Duplicate Rows:
+5268
+
+After Cleaning:
+<class 'pandas.core.frame.DataFrame'>
+Index: 536641 entries, 0 to 541908
+Data columns (total 10 columns):
+ #   Column       Non-Null Count   Dtype  
+---  ------       --------------   -----  
+ 0   InvoiceNo    536641 non-null  object 
+ 1   InvoiceDate  536641 non-null  object 
+ 2   InvoiceTime  536641 non-null  object 
+ 3   StockCode    536641 non-null  object 
+ 4   Description  535187 non-null  object 
+ 5   Quantity     536641 non-null  int64  
+ 6   UnitPrice    536641 non-null  float64
+ 7   Totalsale    536641 non-null  float64
+ 8   CustomerID   401604 non-null  float64
+ 9   Country      536641 non-null  object 
+dtypes: float64(3), int64(1), object(6)
+memory usage: 45.0+ MB
+None
+
+Statistical Summary:
+            Quantity      UnitPrice      Totalsale     CustomerID
+count  536641.000000  536641.000000  536641.000000  401604.000000
+mean        9.620029       4.632656      18.123861   15281.160818
+std       219.130156      97.233118     380.656263    1714.006089
+min    -80995.000000  -11062.060000 -168469.600000   12346.000000
+25%         1.000000       1.250000       3.750000   13939.000000
+50%         3.000000       2.080000       9.870000   15145.000000
+75%        10.000000       4.130000      17.400000   16784.000000
+max     80995.000000   38970.000000  168469.600000   18287.000000
+
+Mean:
+Quantity          9.620029
+UnitPrice         4.632656
+Totalsale        18.123861
+CustomerID    15281.160818
+dtype: float64
+
+Median:
+Quantity          3.00
+UnitPrice         2.08
+Totalsale         9.87
+CustomerID    15145.00
+dtype: float64
+
+Mode:
+InvoiceNo                                  573585
+InvoiceDate                            05-12-2011
+InvoiceTime                           03:56:00 PM
+StockCode                                  85123A
+Description    WHITE HANGING HEART T-LIGHT HOLDER
+Quantity                                        1
+UnitPrice                                    1.25
+Totalsale                                    15.0
+CustomerID                                17841.0
+Country                            United Kingdom
+Name: 0, dtype: object
+
+Standard Deviation:
+Quantity       219.130156
+UnitPrice       97.233118
+Totalsale      380.656263
+CustomerID    1714.006089
+dtype: float64
+
+BUSINESS RECOMMENDATIONS:
+
+1. Identify high-sales months and run promotional campaigns during those periods.
+
+2. Maintain higher inventory for best-selling product categories.
+
+3. Use customer demographic information to create personalized marketing strategies.
+
+4. Analyze customer age groups to improve product targeting.
+
+5. Focus on categories generating maximum revenue for business growth.
+
+
+Cleaned dataset saved successfully!
