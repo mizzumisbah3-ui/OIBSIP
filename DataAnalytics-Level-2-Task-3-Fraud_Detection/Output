@@ -1,0 +1,170 @@
+Dataset Loaded Successfully
+   Time        V1        V2        V3        V4        V5        V6        V7  ...       V23       V24       V25       V26       V27       V28  Amount  Class
+0   0.0 -1.359807 -0.072781  2.536347  1.378155 -0.338321  0.462388  0.239599  ... -0.110474  0.066928  0.128539 -0.189115  0.133558 -0.021053  149.62      0
+1   0.0  1.191857  0.266151  0.166480  0.448154  0.060018 -0.082361 -0.078803  ...  0.101288 -0.339846  0.167170  0.125895 -0.008983  0.014724    2.69      0
+2   1.0 -1.358354 -1.340163  1.773209  0.379780 -0.503198  1.800499  0.791461  ...  0.909412 -0.689281 -0.327642 -0.139097 -0.055353 -0.059752  378.66      0
+3   1.0 -0.966272 -0.185226  1.792993 -0.863291 -0.010309  1.247203  0.237609  ... -0.190321 -1.175575  0.647376 -0.221929  0.062723  0.061458  123.50      0
+4   2.0 -1.158233  0.877737  1.548718  0.403034 -0.407193  0.095921  0.592941  ... -0.137458  0.141267 -0.206010  0.502292  0.219422  0.215153   69.99      0
+
+[5 rows x 31 columns]
+
+Dataset Shape:
+(284807, 31)
+
+Dataset Information:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 284807 entries, 0 to 284806
+Data columns (total 31 columns):
+ #   Column  Non-Null Count   Dtype  
+---  ------  --------------   -----  
+ 0   Time    284807 non-null  float64
+ 1   V1      284807 non-null  float64
+ 2   V2      284807 non-null  float64
+ 3   V3      284807 non-null  float64
+ 4   V4      284807 non-null  float64
+ 5   V5      284807 non-null  float64
+ 6   V6      284807 non-null  float64
+ 7   V7      284807 non-null  float64
+ 8   V8      284807 non-null  float64
+ 9   V9      284807 non-null  float64
+ 10  V10     284807 non-null  float64
+ 11  V11     284807 non-null  float64
+ 12  V12     284807 non-null  float64
+ 13  V13     284807 non-null  float64
+ 14  V14     284807 non-null  float64
+ 15  V15     284807 non-null  float64
+ 16  V16     284807 non-null  float64
+ 17  V17     284807 non-null  float64
+ 18  V18     284807 non-null  float64
+ 19  V19     284807 non-null  float64
+ 20  V20     284807 non-null  float64
+ 21  V21     284807 non-null  float64
+ 22  V22     284807 non-null  float64
+ 23  V23     284807 non-null  float64
+ 24  V24     284807 non-null  float64
+ 25  V25     284807 non-null  float64
+ 26  V26     284807 non-null  float64
+ 27  V27     284807 non-null  float64
+ 28  V28     284807 non-null  float64
+ 29  Amount  284807 non-null  float64
+ 30  Class   284807 non-null  int64  
+dtypes: float64(30), int64(1)
+memory usage: 67.4 MB
+None
+
+Missing Values:
+Time      0
+V1        0
+V2        0
+V3        0
+V4        0
+V5        0
+V6        0
+V7        0
+V8        0
+V9        0
+V10       0
+V11       0
+V12       0
+V13       0
+V14       0
+V15       0
+V16       0
+V17       0
+V18       0
+V19       0
+V20       0
+V21       0
+V22       0
+V23       0
+V24       0
+V25       0
+V26       0
+V27       0
+V28       0
+Amount    0
+Class     0
+dtype: int64
+
+Duplicate Values:
+1081
+
+Dataset Shape After Removing Duplicates:
+(283726, 31)
+
+Class Distribution:
+Class
+0    283253
+1       473
+Name: count, dtype: int64
+
+Fraud Percentage:
+0.1667101358352777
+
+After SMOTE:
+Class
+0    226602
+1    226602
+Name: count, dtype: int64
+Training Logistic Regression...
+Training Random Forest...
+
+==============================
+Model: Logistic Regression
+==============================
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99     56651
+           1       0.11      0.85      0.19        95
+
+    accuracy                           0.99     56746
+   macro avg       0.55      0.92      0.59     56746
+weighted avg       1.00      0.99      0.99     56746
+
+Precision: 0.10700132100396301
+Recall: 0.8526315789473684
+F1 Score: 0.19014084507042253
+ROC-AUC: 0.9570406617061621
+
+==============================
+Model: Random Forest
+==============================
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     56651
+           1       0.89      0.77      0.82        95
+
+    accuracy                           1.00     56746
+   macro avg       0.94      0.88      0.91     56746
+weighted avg       1.00      1.00      1.00     56746
+
+Precision: 0.8902439024390244
+Recall: 0.7684210526315789
+F1 Score: 0.8248587570621468
+ROC-AUC: 0.9474191471512095
+
+FRAUD DETECTION INSIGHTS:
+
+1. The dataset is highly imbalanced, where fraudulent transactions are very small compared to normal transactions.
+
+2. Accuracy is not a reliable metric for fraud detection because the majority class can dominate the results.
+
+3. Recall is an important metric because missing a fraudulent transaction can cause financial loss.
+
+4. SMOTE improves model performance by balancing fraud and non-fraud transaction samples.
+
+5. Random Forest performs well because it can learn complex patterns from transaction features.
+
+
+SCALABILITY DISCUSSION:
+
+For handling millions of transactions:
+
+- Deploy the trained model using a real-time API.
+- Use streaming platforms like Kafka for transaction processing.
+- Use distributed processing tools like Spark for large datasets.
+- Retrain the model periodically with new fraud patterns.
+- Monitor model performance continuously.
+
+
+Fraud Detection Analysis Completed Successfully!
